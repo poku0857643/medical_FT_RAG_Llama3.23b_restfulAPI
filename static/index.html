@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Talk</title>
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Have a Talk to L</h1>
+            <p>Your medical conversational assistant powered by AI</p>
+        </header>
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+            <ul id="messages" class="messages-list">
+                <!-- Dynamic messages will be appended here -->
+            </ul>
+        </main>
+
+        <!-- Input Section -->
+        <footer class="input-area">
+            <input
+                id="message-input"
+                type="text"
+                placeholder="Ask me anything..."
+                class="input-box"
+                onkeypress="if(event.key === 'Enter') sendMessage()"
+            />
+            <button onclick="sendMessage()" class="send-button">Send</button>
+        </footer>
+    </div>
+
+    <!-- Link to JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

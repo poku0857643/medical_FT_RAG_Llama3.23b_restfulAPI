@@ -1,0 +1,195 @@
+/* Apple-style font and color settings */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F7FF;
+    color: #333;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    height: 80vh;
+    margin: auto;
+    /*background-color: #ffffff;*/
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header styling */
+.header {
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f8fb;
+    border-bottom: 1px solid #e1e1e8;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.header p {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Chat area styling */
+.chat-area {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f9f9fb;
+}
+
+/* Messages list */
+.messages-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* General message bubble styling */
+.messages-list li {
+    background-color: #e6e6eb;
+    border-radius: 12px;
+    padding: 12px 18px;
+    margin: 8px 0;
+    max-width: 80%;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+/* User message styling */
+.messages-list li.user {
+    background-color: #007aff;
+    color: #ffffff;
+    margin-left: auto;
+    text-align: right;
+    border-bottom-right-radius: 0;
+}
+
+/* Assistant (bot) message styling */
+.messages-list li.assistant {
+    background-color: #e6e6eb;
+    color: #333;
+    text-align: left;
+    border-bottom-left-radius: 0;
+}
+
+/* Markdown styling within assistant messages */
+.messages-list li.assistant h1, .messages-list li.assistant h2, .messages-list li.assistant h3 {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.messages-list li.assistant h1 {
+    font-size: 20px;
+}
+
+.messages-list li.assistant h2 {
+    font-size: 18px;
+}
+
+.messages-list li.assistant h3 {
+    font-size: 16px;
+}
+
+.messages-list li.assistant p {
+    margin: 6px 0;
+}
+
+.messages-list li.assistant ul, .messages-list li.assistant ol {
+    padding-left: 20px;
+    margin: 6px 0;
+}
+
+.messages-list li.assistant li {
+    margin-bottom: 4px;
+}
+
+.messages-list li.assistant strong {
+    font-weight: bold;
+    color: #222;
+}
+
+.messages-list li.assistant em {
+    font-style: italic;
+    color: #555;
+}
+
+/* Inline code */
+.messages-list li.assistant code {
+    background-color: #f0f0f5;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "Courier New", Courier, monospace;
+    color: #d63384;
+}
+
+/* Code block */
+.messages-list li.assistant pre {
+    background-color: #f0f0f5;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: "Courier New", Courier, monospace;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Input area */
+.input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #e1e1e8;
+    background-color: #f8f8fb;
+}
+
+/* Input box */
+.input-box {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-box:focus {
+    border-color: #007aff;
+}
+
+/* Send button */
+.send-button {
+    padding: 10px 20px;
+    background-color: #005bb5;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.send-button:hover {
+    background-color: #ff5733;
+}
+
+.send-button:active {
+    background-color: #003f8e;
+    transform: scale(0.95);
+}
