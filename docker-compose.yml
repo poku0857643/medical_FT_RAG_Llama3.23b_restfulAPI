@@ -1,0 +1,21 @@
+version: '3.11'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8009:8009"
+    volumes:
+      - ./training_logs.db:/app/training_logs.db
+    environment:
+      - ENV=production
+
+
+  db:
+    image: sqlite:latest
+    volumes:
+      - db_data:/data/db
+
+volumes:
+  db_data:
